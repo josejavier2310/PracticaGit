@@ -1,0 +1,126 @@
+# Comandos básicos de Git
+
+## Configuración inicial
+git config --global user.name "Tu Nombre"  
+# Configura el nombre de usuario en Git.
+
+git config --global user.email "tu@email.com"  
+# Configura el correo electrónico para los commits.
+
+git config --list  
+# Muestra la configuración actual de Git.
+
+## Inicializar y clonar repositorios
+git init  
+# Inicializa un nuevo repositorio Git en la carpeta actual.
+
+git clone URL_DEL_REPOSITORIO  
+# Clona un repositorio remoto en la computadora.
+
+## Estado y cambios en archivos
+git status  
+# Muestra el estado actual del repositorio (archivos modificados, pendientes, etc.).
+
+git add ARCHIVO  
+# Agrega un archivo al área de preparación (staging area).
+
+git add .  
+# Agrega todos los archivos modificados al área de preparación.
+
+git commit -m "Mensaje descriptivo del cambio"  
+# Guarda los cambios en el historial con un mensaje.
+
+git commit -am "Mensaje descriptivo"  
+# Agrega y guarda todos los archivos modificados en un solo paso.
+
+## Historial y versiones
+git log  
+# Muestra el historial de commits.
+
+git log --oneline --graph --decorate --all  
+# Muestra un historial de commits resumido y visualmente organizado.
+
+git diff  
+# Muestra las diferencias entre los archivos modificados y la última versión guardada.
+
+git diff --staged  
+# Muestra las diferencias de los archivos en el área de preparación.
+
+## Deshacer cambios
+git checkout -- ARCHIVO  
+# Descarta los cambios en un archivo antes de hacer commit.
+
+git reset ARCHIVO  
+# Quita el archivo del área de preparación sin perder los cambios.
+
+git reset --hard HEAD  
+# Revierte todos los cambios no confirmados y vuelve al último commit.
+
+git revert ID_DEL_COMMIT  
+# Crea un nuevo commit que revierte los cambios de un commit anterior.
+
+## Ramas y fusión de cambios
+git branch  
+# Lista las ramas existentes en el repositorio.
+
+git branch NUEVA_RAMA  
+# Crea una nueva rama.
+
+git checkout NUEVA_RAMA  
+# Cambia a la nueva rama.
+
+git checkout -b NUEVA_RAMA  
+# Crea y cambia a una nueva rama en un solo paso.
+
+git merge OTRA_RAMA  
+# Fusiona los cambios de otra rama a la rama actual.
+
+git branch -d NOMBRE_RAMA  
+# Elimina una rama que ya no se necesita.
+
+## Trabajar con repositorios remotos
+git remote -v  
+# Muestra las conexiones remotas configuradas.
+
+git remote add origin URL_DEL_REPOSITORIO  
+# Conecta el repositorio local con un repositorio remoto.
+
+git push origin main  
+# Sube los cambios de la rama main al repositorio remoto.
+
+git pull origin main  
+# Descarga y fusiona los cambios más recientes del repositorio remoto.
+
+git fetch origin  
+# Obtiene los cambios remotos sin fusionarlos aún.
+
+## Manejo de conflictos
+git merge CONFLICTING_BRANCH  
+# Intenta fusionar otra rama con la actual y puede generar conflictos.
+
+git status  
+# Muestra los archivos en conflicto después de un merge fallido.
+
+git add ARCHIVO_RESUELTO  
+# Marca un archivo en conflicto como resuelto después de editarlo.
+
+git commit -m "Resolver conflicto en ARCHIVO"  
+# Guarda los cambios después de resolver un conflicto.
+
+## Otras utilidades
+git stash  
+# Guarda temporalmente los cambios sin hacer commit.
+
+git stash pop  
+# Recupera los cambios guardados con stash.
+
+git rm ARCHIVO  
+# Elimina un archivo del repositorio y del sistema de archivos.
+
+git tag NOMBRE_TAG  
+# Crea una etiqueta en un commit específico.
+
+git show NOMBRE_TAG  
+# Muestra información de una etiqueta específica.
+
+# Fin del archivo
